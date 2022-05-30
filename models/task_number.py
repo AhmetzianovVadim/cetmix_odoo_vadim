@@ -26,3 +26,8 @@ class ProjectTask(models.Model):
             args = []
         domain = args + ['|', ('name', operator, name), ('task_number', operator, name)]
         return super(ProjectTask, self).search(domain, limit=limit).name_get()
+
+    def post_hook(self):
+        for record in self.search([]):
+            record.task_number = self.env['ir.sequence'].next_by_code(
+                'project.task')

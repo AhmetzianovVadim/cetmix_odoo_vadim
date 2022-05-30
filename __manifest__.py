@@ -33,4 +33,5 @@
 
     # only loaded in demonstration mode
     'demo': [],
+    'post_init_hook': '_task_number_post_init_hook'
 }
