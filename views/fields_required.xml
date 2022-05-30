@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="fields_required" model="ir.ui.view">
+        <field name="name">fields.required.inherited</field>
+        <field name="model">ir.model.fields</field>
+        <field name="inherit_id" ref="base.view_model_fields_tree"/>
+        <field name="arch" type="xml">
+            <field name="state" position="after">
+                <field name="property_required"/>
+            </field>
+        </field>
+    </record>
+</odoo>

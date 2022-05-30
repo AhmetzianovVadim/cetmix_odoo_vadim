@@ -20,10 +20,16 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['sale'],
+    'depends': ['sale', 'project'],
 
     # always loaded
-    'data': ["views/sale_order_line.xml", "report/sale_order_report.xml"],
+    'data': ["data/task_number_sequence.xml",
+             "views/sale_order_line.xml",
+             "report/sale_order_report.xml",
+             "views/sale_show_all_order_line.xml",
+             "views/fields_required.xml",
+             "views/task_number.xml"
+             ],
 
     # only loaded in demonstration mode
     'demo': [],
